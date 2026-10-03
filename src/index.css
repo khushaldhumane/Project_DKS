@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Global Styles ───────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-sans text-slate-700 bg-white antialiased;
+}
+
+/* ── Scroll Reveal Animation Utility ─────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Custom Scrollbar ────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-600;
+}
+
+/* ── Selection Color ─────────────────────────────────────── */
+::selection {
+  @apply bg-primary-200 text-primary-900;
+}
